@@ -1,11 +1,22 @@
-import { Text, View } from "react-native";
+import {View } from "react-native";
 import {ContainerLogin} from "../styles/login.style"
+import Input from "../../../shared/components/input/Input";
+import Button from "../../../shared/components/button/Button";
+
+
+
 
 const Login = () => {
+    const handleOnPress = () => {
+        console.log('Clicou');
+    }
     return(
         <View>
-            <ContainerLogin />
-            <Text>ahuahu</Text>
+            <ContainerLogin>
+            <Input />
+            <Input />
+            <Button margin="8px" title="ENTRAR" onPress={handleOnPress} />
+            </ContainerLogin>
         </View>
     )
 }
